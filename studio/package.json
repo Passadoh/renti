@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "blog-with-gatsby-studio",
+  "name": "renti-web",
   "version": "1.0.15",
   "main": "package.json",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Frank de Vries",
   "scripts": {
     "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
@@ -26,7 +26,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^3.11.0",
+    "react-icons": "^4.2.0",
     "sanity-plugin-dashboard-widget-document-list": "^0.0.13",
     "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
   }
