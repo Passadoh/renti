@@ -9,7 +9,6 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   plugins: [
-    "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-sanity",
@@ -26,7 +25,7 @@ module.exports = {
         name:
           "Renti Administratiekantoor | Voor al uw boekhouding, belasting- en BTW-aanggifte",
         short_name: "Renti Administratiekantoor",
-        description: "Voor al uw boekhouding, belasting- en BTW-aanggifte",
+        description: "Voor al uw boekhouding, belasting- en BTW-aangifte",
         start_url: "/",
         lang: "nl",
         background_color: "#FEFBF4",
@@ -35,5 +34,6 @@ module.exports = {
         icon: "src/assets/img/512-512-favicon.svg",
       },
     },
+    "gatsby-plugin-emotion",
   ],
 };
