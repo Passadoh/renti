@@ -12,8 +12,7 @@ export default {
                 "NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.",
               sites: [
                 {
-                  buildHookId:
-                    "6060ea432a3799afc46d0f08",
+                  buildHookId: "6060ea432a3799afc46d0f08",
                   title: "Sanity Studio",
                   name: "renti-studio",
                   apiId: "e1a4efeb-c679-4d0e-950c-ba81ffb426c1",
@@ -31,8 +30,7 @@ export default {
         data: [
           {
             title: "GitHub repo",
-            value:
-              "https://github.com/Passadoh/renti",
+            value: "https://github.com/Passadoh/renti",
             category: "Code",
           },
           {
@@ -44,14 +42,5 @@ export default {
       },
     },
     { name: "project-users", layout: { height: "auto" } },
-    {
-      name: "document-list",
-      options: {
-        title: "Recent blog posts",
-        order: "_createdAt desc",
-        types: ["post"],
-      },
-      layout: { width: "medium" },
-    },
   ],
 };

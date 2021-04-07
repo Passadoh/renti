@@ -2,7 +2,7 @@
   "private": true,
   "name": "renti-web",
   "version": "1.0.7",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Frank de Vries",
   "scripts": {
     "build": "gatsby build",
     "clean-cache": "gatsby clean",
@@ -11,17 +11,18 @@
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\""
   },
   "devDependencies": {
-    "dotenv": "^8.0.0",
-    "postcss": "^8.2.7",
-    "postcss-preset-env": "^6.6.0"
+    "dotenv": "^8.0.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.22",
     "date-fns": "^2.19.0",
     "gatsby": "^3.1.2",
     "gatsby-image": "^3.1.0",
     "gatsby-plugin-image": "^1.0.0",
+    "gatsby-plugin-manifest": "^3.2.0",
     "gatsby-plugin-postcss": "^4.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-source-sanity": "^7.0.0",
