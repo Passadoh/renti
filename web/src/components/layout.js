@@ -1,14 +1,16 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
+import useSticky from "../lib/useSticky";
 
 const Layout = ({ children }) => {
-  // const [showNotice, setShowNotice] = useCookie("showNotice", 1);
+  const { isSticky, element } = useSticky();
   return (
     <>
-      {/*{showNotice ? <CookieNotice set={setShowNotice} /> : ""}*/}
-      <Header />
-      <main css={{ minHeight: "80vh" }}>{children}</main>
+      <Header sticky={isSticky} />
+      <main ref={element} css={{ minHeight: "80vh" }}>
+        {children}
+      </main>
       <Footer />
     </>
   );

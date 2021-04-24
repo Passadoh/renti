@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby";
 
 function SEO({ description, lang, meta, keywords, title, image, type, path }) {
   const GOOGLE_FONTS_PATH =
-    "https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700|Raleway:300,400,400i,700&display=swap";
+    "https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@600;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap";
   return (
     <StaticQuery
       query={detailsQuery}
@@ -13,7 +13,7 @@ function SEO({ description, lang, meta, keywords, title, image, type, path }) {
         const metaDescription =
           description || (data.site && data.site.description) || "";
         const siteTitle = (data.site && data.site.title) || "";
-        // const siteAuthor = (data.site && data.site.author) || "";
+        const siteAuthor = (data.site && data.site.author) || "";
         const metaImage = image && image.asset ? image.asset.fixed.src : "";
         const metaImageAlt = (image && image.alt) || "";
 
@@ -56,10 +56,6 @@ function SEO({ description, lang, meta, keywords, title, image, type, path }) {
                 content: process.env.GATSBY_HOME_PAGE + path,
               },
               {
-                property: "og:image",
-                content: metaImage,
-              },
-              {
                 property: "og:locale",
                 content: "nl_NL",
               },
@@ -67,10 +63,6 @@ function SEO({ description, lang, meta, keywords, title, image, type, path }) {
                 name: "twitter:card",
                 content: "summary",
               },
-              // {
-              //   name: "twitter:creator",
-              //   content: siteAuthor,
-              // },
               {
                 name: "twitter:title",
                 content: title,
@@ -79,15 +71,39 @@ function SEO({ description, lang, meta, keywords, title, image, type, path }) {
                 name: "twitter:description",
                 content: metaDescription,
               },
-              {
-                property: "twitter:image",
-                content: metaImage,
-              },
-              {
-                property: "twitter:image:alt",
-                content: metaImageAlt,
-              },
             ]
+              .concat(
+                metaImage !== ""
+                  ? {
+                      property: "og:image",
+                      content: metaImage,
+                    }
+                  : []
+              )
+              .concat(
+                metaImage !== ""
+                  ? {
+                      name: "twitter:creator",
+                      content: siteAuthor,
+                    }
+                  : []
+              )
+              .concat(
+                siteAuthor !== ""
+                  ? {
+                      property: "twitter:image",
+                      content: metaImage,
+                    }
+                  : []
+              )
+              .concat(
+                metaImageAlt !== ""
+                  ? {
+                      property: "twitter:image:alt",
+                      content: metaImageAlt,
+                    }
+                  : []
+              )
               .concat(
                 keywords && keywords.length > 0
                   ? {

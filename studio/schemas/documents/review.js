@@ -27,4 +27,11 @@ export default {
       description: "The actual review.",
     },
   ],
+  preview: {
+    select: {
+      title: "name",
+      subtitle: "slug.current",
+      media: "avatar",
+    },
+  },
 };

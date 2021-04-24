@@ -49,7 +49,6 @@ export default () =>
       S.listItem()
         .title("Reviews")
         .icon(MdFormatQuote)
-        .child(
-          S.editor().id("reviews").schemaType("review").documentId("reviews")
-        ),
+        .schemaType("review")
+        .child(S.documentTypeList("review").title("review")),
     ]);

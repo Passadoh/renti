@@ -1,24 +1,14 @@
 import React from "react";
-import {
-  Global,
-  css,
-  ThemeProvider as EmotionThemeProvider,
-} from "@emotion/react";
-
+import { Global, ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import theme from "./theme";
+import BASE_STYLE from "./styles/base";
+import TYPOGRAPHY from "./styles/typography";
 
 const ThemeProvider = ({ children }) => {
   return (
     <EmotionThemeProvider theme={theme}>
-      <Global
-        styles={css`
-          "*,*::after,*::before" {
-            margin: 0;
-            padding: 0;
-            box-sizing: inherit;
-          }
-        `}
-      />
+      <Global styles={BASE_STYLE} />
+      <Global styles={TYPOGRAPHY} />
       {children}
     </EmotionThemeProvider>
   );
