@@ -81,7 +81,17 @@ const ContactSection = () => {
               position: absolute;
               right: -13rem;
               bottom: -22rem;
+              width: 644px;
               max-width: 644px;
+
+              & > svg {
+                width: 100%;
+                height: auto;
+                & > g {
+                  -webkit-clip-path: url("clip0");
+                }
+              }
+
               ${mq("xl")} {
                 max-width: 510px;
               }

@@ -23,8 +23,13 @@ const BASE_STYLE = css`
     }
   }
 
-  body {
+  body,
+  html {
+    position: relative;
     overflow-x: hidden;
+  }
+
+  body {
     box-sizing: border-box;
   }
 

@@ -25,6 +25,14 @@ const ServiceCard = ({ imageFirst, headline, paragraph, children }) => {
     display: flex;
     justify-content: center;
 
+    & > svg {
+      width: 100%;
+      height: auto;
+      & > g {
+        -webkit-clip-path: url("clip0");
+      }
+    }
+    height: 265px;
     max-height: 265px;
     ${mq("lg")} {
       max-height: 200px;

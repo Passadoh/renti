@@ -106,6 +106,13 @@ const HeroSection = () => {
                   top: -7.5rem;
                   right: -15.5rem;
                   width: 83rem;
+
+                  & > svg {
+                    & > g {
+                      -webkit-clip-path: url("clip0");
+                    }
+                  }
+
                   ${mq("lg")} {
                     max-width: 63rem;
                     top: 4.5rem;
