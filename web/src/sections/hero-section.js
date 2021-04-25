@@ -142,6 +142,7 @@ const HeroSection = () => {
               position: absolute;
               left: -13rem;
               bottom: -18rem;
+              width: 409px;
               max-width: 409px;
               ${mq("lg")} {
                 bottom: -11rem;
