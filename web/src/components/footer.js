@@ -91,12 +91,12 @@ const Footer = () => {
             <h3 className="heading-3">Voorwaarden</h3>
             <ul>
               <li>
-                <Link className="anchor" to="/">
+                <Link className="anchor" to="/p/terms/">
                   Algemene Voorwaarden
                 </Link>
               </li>
               <li>
-                <Link className="anchor" to="/">
+                <Link className="anchor" to="/p/privacy/">
                   Privacy beleid
                 </Link>
               </li>
@@ -162,6 +162,7 @@ const Footer = () => {
               css={css`
                 font-size: 1.4rem !important;
               `}
+              target="_blank noreferrer"
               className="anchor"
               href="https://franksblog.nl/about/"
             >

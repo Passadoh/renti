@@ -12,7 +12,7 @@ const TYPOGRAPHY = css`
     font-style: normal;
     text-rendering: optimizeLegibility;
   }
-  .title {
+  .title, .heading-1 {
     font-family: Cormorant Infant, Serif;
     font-weight: 700;
     font-size: 5.2rem;
@@ -39,6 +39,15 @@ const TYPOGRAPHY = css`
     font-size: 3rem;
     line-height: 123.18%;
     letter-spacing: -0.02em;
+  }
+
+  .heading-4 {
+    font-family: Cormorant Infant,Serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 123.18%;
+    letter-spacing: -0.02em;
+    font-style: italic;
   }
 
   .paragraph {

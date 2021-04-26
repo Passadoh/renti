@@ -2,6 +2,7 @@
   "private": true,
   "name": "renti",
   "version": "1.0.17",
+  "author": "Frank de Vries",
   "scripts": {
     "build": "lerna run build --parallel",
     "dev": "lerna run dev --parallel",

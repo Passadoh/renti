@@ -173,28 +173,29 @@ const Header = ({ sticky }) => {
       css={css`
         background: ${offWhite};
         padding: 9px ${base} 0 ${base};
+        @keyframes moveDown {
+          from {
+            transform: translateY(-13rem);
+          }
+          to {
+            transform: translateY(0rem);
+          }
+        }
+        &.sticky {
+          width: 100%;
+          height: 13rem;
+
+          position: fixed;
+          z-index: 2000;
+          animation: moveDown 0.5s ease-in-out;
+          box-shadow: 1px 1px 1px #222;
+        }
 
         ${mq("lg")} {
           padding: 9px ${xl} 0 ${xl};
         }
 
         ${mq("md")} {
-          @keyframes moveDown {
-            from {
-              transform: translateY(-13rem);
-            }
-            to {
-              transform: translateY(0rem);
-            }
-          }
-          &.sticky {
-            position: fixed;
-            z-index: 2000;
-            animation: moveDown 0.5s ease-in-out;
-            box-shadow: 1px 1px 1px #222;
-          }
-          width: 100%;
-          height: 13rem;
           padding: 9px ${md} 0 ${md};
         }
 

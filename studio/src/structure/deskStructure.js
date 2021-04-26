@@ -1,7 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdSettings } from "react-icons/md";
-import { MdPerson } from "react-icons/md";
-import { MdFormatQuote } from "react-icons/md";
+import { MdSettings, MdPerson, MdFormatQuote, MdFolder } from "react-icons/md";
 
 export const getDefaultDocumentNode = () => {
   /**
@@ -44,11 +42,18 @@ export default () =>
         .child(S.documentTypeList("author").title("Authors")),
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["review", "author", "siteSettings"].includes(listItem.getId())
+          !["review", "author", "siteSettings", "page"].includes(
+            listItem.getId()
+          )
       ),
       S.listItem()
         .title("Reviews")
         .icon(MdFormatQuote)
         .schemaType("review")
         .child(S.documentTypeList("review").title("review")),
+      S.listItem()
+        .title("Pages")
+        .icon(MdFolder)
+        .schemaType("page")
+        .child(S.documentTypeList("page").title("Pages")),
     ]);
